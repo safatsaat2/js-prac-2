@@ -1,15 +1,25 @@
-
-function loadUsers() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.json())
-        .then(data => displayUsers(data))
-}
-
-function displayUsers(data) {
-    const ul = document.getElementById('user-list');
-    for (const user of data){
-        const li = document.createElement('li');
-        li.innerText= user.name;
-        ul.appendChild(li);
+function leapyear(number){
+    if(number%4 == 0){
+        return "this year is leap year"
+    }
+    else{
+        return "This year is not a leap year"
     }
 }
+
+var result = leapyear(2021);
+console.log(result);
+
+function evenNumber(number){
+    for (i = 0; i < number.length; i++){
+        var result  = number[i];
+        if(result % 2 == 1){
+            console.log(number[i], "is odd")
+        }
+        else{
+            console.log(number[i], "is even")
+        }
+    }
+}
+var array = [1,2,3,4,5];
+evenNumber(array)
